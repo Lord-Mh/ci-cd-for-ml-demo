@@ -26,11 +26,11 @@ jobs:
 
     - name: Run Unit Tests
       run: |
-        PYTHONPATH=src pytest tests/
+        PYTHONPATH=. pytest tests/
 
     - name: Run Training Pipeline
       run: |
-        PYTHONPATH=src python src/train.py
+        PYTHONPATH=. python src/train.py
 
     - name: Upload Artifacts (Model, Plots, Metrics)
       uses: actions/upload-artifact@v4
